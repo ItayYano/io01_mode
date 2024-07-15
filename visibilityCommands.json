@@ -10,8 +10,22 @@
         "desc": "Update  kadabra", 
         "cmd": "sh ./io01_update.sh"
     },
-      
-     "IPinfo": {
+     "self_discover": {
+        "type": "run",
+        "desc": "Detects local network interfaces, internal IP address, external IP address and gateways", 
+        "cmd": "sudo ./self_discover.sh"
+    },  
+     "passive_discover": {
+        "type": "run",
+        "desc": "Network traffic capture and and analysis, Usage: passive_discover <local_interface> <duration>", 
+        "cmd": "sudo ./passive_scan_sniff"
+    },
+"active_scan_arp": {
+        "type": "run",
+        "desc": "Usage: activ_scan_arp <IP> <output file>", 
+        "cmd": "sudo ./nmapio_arp.sh"
+    },
+"IPinfo": {
         "type": "run",
         "desc": "ipinfo", 
         "cmd": "curl -s https://ipinfo.io/"
